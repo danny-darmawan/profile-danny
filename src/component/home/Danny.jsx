@@ -31,11 +31,11 @@ function Danny() {
     return () => clearTimeout(timeout);
   }, []);
 
-  const fotodanny = ['./danny_photo/danny_nobg.png','./danny_photo/danny_nobg1.png']
+  const fotodanny = ['/profile-danny/danny_photo/danny_nobg.png','/profile-danny/danny_photo/danny_nobg1.png']
 
   return (
     <div className={`w-full h-[100vh] bg-slate-300 flex sm:h-auto md:h-[100vh]`} style={
-      {backgroundImage: `url(./bg/bg_profile.png)`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: '50%, 50%'}
+      {backgroundImage: `url(/profile-danny/bg/bg_profile.png)`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: '50%, 50%'}
     }>
       <div className=' mt-32'>
         <div className='flex justify-evenly sm:flex-col sm:items-center md:flex-row md:items-start'> {/* gambar danny */}
