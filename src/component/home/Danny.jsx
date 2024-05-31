@@ -1,12 +1,14 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-
+import Navbar from './Navbar'
 
 function Danny() {
   const [isOpen, setIsOpen] = useState(false);
 
   const [timercChange, setTimerChange] = useState(false);
   const [timerAwal, setTimerAwal] = useState(true)
+
+
 
 
   useEffect(() => {
@@ -34,9 +36,10 @@ function Danny() {
   const fotodanny = ['/profile-danny/danny_photo/danny_nobg.png','/profile-danny/danny_photo/danny_nobg1.png']
 
   return (
-    <div className={`w-full h-[100vh] bg-slate-300 flex sm:h-auto md:h-[100vh]`} style={
+    <div className={`w-full h-[100vh] bg-slate-300 flex flex-col sm:h-auto md:h-[100vh]`} style={
       {backgroundImage: `url(/profile-danny/bg/bg_profile.png)`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: '50%, 50%'}
     }>
+      <Navbar />
       <div className=' mt-32'>
         <div className='flex justify-evenly sm:flex-col sm:items-center md:flex-row md:items-start'> {/* gambar danny */}
           <div className={`shadow-lg rounded-lg sm:w-1/2 md:w-1/3 lg:w-1/4 transition-all duration-[3000ms] ${isOpen 
@@ -44,21 +47,21 @@ function Danny() {
             : 'opacity-0 -translate-x-full'}`}>
           <img 
           src={`${timercChange ? fotodanny[1] : fotodanny[0]}`} 
-          className={`w-full h-[420px] object-center object-cover rounded-lg transition-opacity duration-500 ${timerAwal ? 'opacity-100' : 'opacity-0'}`}
+          className={`select-none w-full h-[420px] object-center object-cover rounded-lg transition-opacity duration-500 ${timerAwal ? 'opacity-100' : 'opacity-0'}`}
           alt='danny photo'/>
           </div>
           <div className='mt-16 w-[50%]'> {/* card danny */ }
             <div className={`shadow-lg rounded-lg transition-all duration-[3000ms] ${isOpen 
             ? 'opacity-100 translate-y-0'
             : 'opacity-0 translate-x-full'}`}>
-              <h1 className={`font-serif text-5xl cursor-default select-none transition-all duration-500 ${timerAwal ? 'opacity-100' : 'opacity-0 '}`}>
+              <h1 className={`font-serif text-5xl select-none transition-all duration-500 ${timerAwal ? 'opacity-100' : 'opacity-0 '}`}>
                 {
                   timercChange
                   ? "Saya"
                   : "Danny"
                 }
               </h1>
-              <h2 className={`font-serif text-2xl cursor-default select-none ml-6 transition-all duration-500 ${timerAwal ? 'opacity-100' : 'opacity-0'}`}>
+              <h2 className={`font-serif text-2xl select-none ml-6 transition-all duration-500 ${timerAwal ? 'opacity-100' : 'opacity-0'}`}>
                 {
                   timercChange
                 ? "Adalah Programer"

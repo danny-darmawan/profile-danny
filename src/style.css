@@ -17,20 +17,29 @@ body {
   overflow: auto;
 }
 
-
 /* For WebKit browsers (Chrome, Safari, etc.) */
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
+::-webkit-scrollbar {
+  width: 4px; /* Set the width of the scrollbar */
 }
 
 /* For Firefox */
-.hide-scrollbar {
-  scrollbar-width: none; /* Hide the scrollbar */
-  -ms-overflow-style: none; /* IE and Edge */
+::-webkit-scrollbar-thumb {
+  width: 4px; /* Set the width of the scrollbar thumb (the draggable part) */
 }
 
-/* General */
-.hide-scrollbar {
-  overflow: -moz-scrollbars-none; /* For older versions of Firefox */
-  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+/* Track and thumb styles */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
 }
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+}
+
+/* Apply this style to the container element */
+.container {
+  /* Other styles */
+  overflow-y: auto; /* This allows vertical scrolling */
+  overflow-x: hidden; /* This hides horizontal scrolling */
+}
+
