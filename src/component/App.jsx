@@ -13,7 +13,7 @@ export default class App extends React.Component {
     return (
       <Router>
         <Routes>
-          <Route path="/" element={<RootHome />} />
+          <Route path="/profile-danny" element={<RootHome />} />
         </Routes>
       </Router>
     )
