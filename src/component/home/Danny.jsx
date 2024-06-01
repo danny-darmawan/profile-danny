@@ -39,7 +39,7 @@ function Danny() {
       <Navbar />
       <div className=' mt-32'>
         <div className='flex justify-evenly max-sm:flex-col max-sm:items-center sm:flex-col sm:items-center md:flex-row md:items-start'> {/* gambar danny */}
-          <div className={`shadow-lg rounded-lg max-sm:w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4 transition-all duration-[3000ms] ${isOpen 
+          <div className={`shadow-lg rounded-lg max-sm:h-auto max-sm:w-[100%] sm:w-1/2 md:w-1/3 lg:w-1/4 transition-all duration-[3000ms] ${isOpen 
             ? 'opacity-100 translate-y-0'
             : 'opacity-0 -translate-x-full'}`}>
           <img 
@@ -47,7 +47,7 @@ function Danny() {
           className={`select-none w-full h-[420px] object-center object-cover rounded-lg transition-opacity duration-500 ${timerAwal ? 'opacity-100' : 'opacity-0'}`}
           alt='danny photo'/>
           </div>
-          <div className='mt-16 w-[50%]'> {/* card danny */ }
+          <div className='mt-16 w-[50%] max-sm:w-[80%]'> {/* card danny */ }
             <div className={`shadow-lg rounded-lg transition-all duration-[3000ms] ${isOpen 
             ? 'opacity-100 translate-y-0'
             : 'opacity-0 translate-x-full'}`}>
@@ -67,7 +67,7 @@ function Danny() {
               </h2>
             </div>
             <div className='mt-10 justify-around gap-16 flex'>
-              <div className='flex flex-col items-center'>
+              <div className='flex flex-col items-center max-sm:hidden'>
                 <h1 className='[writing-mode:vertical-lr] tracking-[.4em] font-bold text-2xl text-gray-500 cursor-default select-none'>ABOUT</h1>
                 <div className='h-[30px] bg-gray-500 w-[2px]'></div>
               </div>

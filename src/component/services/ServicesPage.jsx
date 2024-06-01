@@ -122,11 +122,11 @@ function ServicesPage() {
           Here Are Some of My Skills
         </h1>
       </div>
-      <div className="mr-[10%] grid grid-cols-3 grid-row-2 grid-flow-row-dense gap-5 ml-[10%] mt-32">
+      <div className="mr-[10%] grid grid-cols-3 max-sm:grid-cols-2 grid-row-2 grid-flow-row-dense gap-5 ml-[10%] mt-32">
         <div
           ref={addToRefs}
           id="webDev"
-          className={`border-2 rounded transition-all duration-1000 hover:scale-110 hover:bg-black hover:text-white border-purple-700 h-44 col-span-2 bg-purple-300 flex flex-col ${
+          className={`border-2 rounded transition-all duration-1000 hover:scale-110 hover:bg-black hover:text-white border-purple-700 h-44 max-sm:h-auto col-span-2 bg-purple-300 flex flex-col ${
             visibleElements.webDev ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
           }`}
         >
@@ -141,7 +141,7 @@ function ServicesPage() {
         <div
           ref={addToRefs}
           id="appDev"
-          className={`border-2 rounded transition-all duration-1000 hover:scale-110 hover:bg-black hover:text-white border-purple-700 h-44 col-span-2 bg-purple-300 ${
+          className={`border-2 rounded transition-all duration-1000 hover:scale-110 hover:bg-black hover:text-white border-purple-700 h-44 max-sm:h-auto col-span-2 bg-purple-300 ${
             visibleElements.appDev ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
           }`}
         >
@@ -171,7 +171,7 @@ function ServicesPage() {
         <div
           ref={addToRefs}
           id="skillsList"
-          className={`max-sm:hidden flex flex-col text-center transition-all duration-1000 ${
+          className={`max-sm:hidden md:hidden lg:flex  flex flex-col text-center transition-all duration-1000 ${
             visibleElements.skillsList ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
           }`}
         >

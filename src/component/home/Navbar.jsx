@@ -55,7 +55,7 @@ function Navbar() {
         <div className={`fixed inset-0 bg-transparent overflow-auto items-end flex flex-col z-10 transition-all duration-[500ms] ${isReadyToShow 
           ? 'opacity-100 translate-y-0'
           : 'opacity-0 translate-x-full'}`}>
-          <div className='bg-white w-[25%] h-auto flex flex-col'>
+          <div className='bg-white w-[25%] h-auto flex flex-col max-sm:w-auto'>
           <button
             className='mr-8 bg-slate-200 transition duration-300 ease-in-out hover:bg-gray-500 self-end h-12 w-12 items-center flex justify-center mt-10 focus:outline-none'
             onClick={toggleMenu}
