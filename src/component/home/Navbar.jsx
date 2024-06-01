@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
+  let posisi_sekarang = 'home'
   const [isReadyToShow, setIsReadyToShow] = useState(false);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ function Navbar() {
     <div className='mt-10 flex justify-between'><div className=' select-none font-serif ml-12 border border-black bg-black h-20 w-12 text-white text-center'>
       <h1>D N</h1>
       <h1>A N</h1>
-      <h1>_-.Y</h1>
+      <h1>_-Y</h1>
       </div>
     <div className='mr-10 ' onClick={toggleMenu}>
           <button className='focus:outline-none'>
@@ -52,7 +52,7 @@ function Navbar() {
           </button>
         </div>
         {isOpen &&  (
-        <div className={`fixed inset-0 bg-transparent overflow-auto items-end flex flex-col z-10 transition-all duration-[1000ms] ${isReadyToShow 
+        <div className={`fixed inset-0 bg-transparent overflow-auto items-end flex flex-col z-10 transition-all duration-[500ms] ${isReadyToShow 
           ? 'opacity-100 translate-y-0'
           : 'opacity-0 translate-x-full'}`}>
           <div className='bg-white w-[25%] h-auto flex flex-col'>
@@ -76,10 +76,16 @@ function Navbar() {
             </svg>
           </button>
           <nav className='flex flex-col space-y-12 font-serif ml-12 mt-20 '>
-            <a href='#' className={` text-base hover:text-purple-500`} onClick={toggleMenu}>Home</a>
-            <a href='#' className=' text-base hover:text-purple-500' onClick={toggleMenu}>About</a>
-            <a href='#' className=' text-base hover:text-purple-500' onClick={toggleMenu}>Services</a>
-            <a href='#' className=' text-base hover:text-purple-500' onClick={toggleMenu}>Contact</a>
+            <a href='#' className={`text-base transition-all duration-300 hover:text-purple-500 ${
+              posisi_sekarang === 'home'
+               ? 'text-purple-500'
+                : 'text-black'
+            }`} onClick={toggleMenu}>
+              Home
+            </a>
+            <a href='#' className={`text-base transition-all duration-300 hover:text-purple-500 `} onClick={toggleMenu}>About</a>
+            <a href='#' className={` text-base transition-all duration-300 hover:text-purple-500 `} onClick={toggleMenu}>Services</a>
+            <a href='#' className={` text-base transition-all duration-300 hover:text-purple-500 `} onClick={toggleMenu}>Contact</a>
           </nav>
           <div className='flex flex-col ml-12 mb-20 font-serif mt-12 w-56 items-center'>
             <h1 className='text-2xl font-bold'>WORKS</h1>

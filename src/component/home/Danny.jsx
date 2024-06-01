@@ -8,9 +8,6 @@ function Danny() {
   const [timercChange, setTimerChange] = useState(false);
   const [timerAwal, setTimerAwal] = useState(true)
 
-
-
-
   useEffect(() => {
     // Start the blink effect after the first image is displayed
     const interval = setInterval(() => {
@@ -19,7 +16,7 @@ function Danny() {
         setTimerChange(prev => !prev); // Change the image source after the blink transition
         setTimerAwal(true); // Make the image visible again
       }, 500); // 0.5 second delay to create the blink effect
-    }, 10000); // Change image every 3 seconds
+    }, 10000); // Change image every 10 seconds
 
     return () => clearInterval(interval);
   }, []);
