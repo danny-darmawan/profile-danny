@@ -156,7 +156,7 @@ function ServicesPage() {
         <div
           ref={addToRefs}
           id="skillsIntro"
-          className={`flex flex-col transition-all duration-1000 ${
+          className={`max-sm:hidden flex flex-col transition-all duration-1000 ${
             visibleElements.skillsIntro ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
           }`}
         >
@@ -171,7 +171,7 @@ function ServicesPage() {
         <div
           ref={addToRefs}
           id="skillsList"
-          className={`flex flex-col text-center transition-all duration-1000 ${
+          className={`max-sm:hidden flex flex-col text-center transition-all duration-1000 ${
             visibleElements.skillsList ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
           }`}
         >

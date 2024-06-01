@@ -56,7 +56,7 @@ function SidebarNav() {
   };
 
   return (
-    <div className={`bg-gray-700 text-white border-r-2 h-full flex flex-col items-center text-center border-gray-400 w-[20%] ${isFixed ? 'fixed top-0 left-0 h-full  border-r-2 border-gray-400 z-10' : 'absolute top-[100vh] left-0 '}`}>
+    <div className={`bg-gray-700 max-md:hidden  text-white border-r-2 h-full flex flex-col items-center text-center border-gray-400 w-[20%] ${isFixed ? 'fixed top-0 left-0 h-full  border-r-2 border-gray-400 z-10' : 'absolute top-[100vh] left-0 '}`}>
       <h1 className="text-2xl font-serif mt-10">I Will Show You</h1>
       {/* items items-1*/}
       <div className={`border-2 border-purple-500 rounded mt-10 w-20 transition-all duration-1000 

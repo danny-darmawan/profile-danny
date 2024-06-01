@@ -9,10 +9,10 @@ function RootHome() {
   return (
     <>
     <Danny />
-    <div className='flex h-auto w-full'>
-    <SidebarNav />
+    <div className='flex h-auto w-full '>
+    <SidebarNav  />
     <div className="flex flex-col flex-1 min-h-screen bg-gray-500">
-          <div className="flex flex-col self-end w-[70%]">
+          <div className="flex flex-col self-end max-md:select-none max-md:w-[100%] w-[70%]">
             <ServicesPage />
             <Workpage />
             <Contactpage />
